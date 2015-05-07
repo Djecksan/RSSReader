@@ -10,7 +10,7 @@
 		402137991AF2398100577734 /* RSSAPIClient+RequestRss.m in Sources */ = {isa = PBXBuildFile; fileRef = 402137981AF2398100577734 /* RSSAPIClient+RequestRss.m */; };
 		4021379D1AF2460900577734 /* RSSLentaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4021379C1AF2460900577734 /* RSSLentaItem.m */; };
 		402137A11AF261F000577734 /* RSSEnclosure.m in Sources */ = {isa = PBXBuildFile; fileRef = 402137A01AF261F000577734 /* RSSEnclosure.m */; };
-		402137A51AF26FDB00577734 /* RSSItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 402137A41AF26FDB00577734 /* RSSItemCell.m */; };
+		402137A51AF26FDB00577734 /* RSSGazetaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 402137A41AF26FDB00577734 /* RSSGazetaCell.m */; };
 		5566DB091AF184550096301C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5566DB081AF184550096301C /* main.m */; };
 		5566DB141AF184550096301C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5566DB131AF184550096301C /* Images.xcassets */; };
 		5566DB231AF184550096301C /* RSSReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5566DB221AF184550096301C /* RSSReaderTests.m */; };
@@ -22,6 +22,8 @@
 		5566DB501AF2BDA60096301C /* RSSGazetaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5566DB4F1AF2BDA60096301C /* RSSGazetaItem.m */; };
 		5566DB541AF38F020096301C /* UITableViewController+SeparatorZeroInset.m in Sources */ = {isa = PBXBuildFile; fileRef = 5566DB531AF38F020096301C /* UITableViewController+SeparatorZeroInset.m */; };
 		5566DB581AF3B4E40096301C /* RSSDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5566DB571AF3B4E40096301C /* RSSDetailController.m */; };
+		559760C21AFB75D300F7460B /* RSSLentaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 559760C11AFB75D300F7460B /* RSSLentaCell.m */; };
+		559760C71AFB767900F7460B /* RSSAbstractCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 559760C61AFB767900F7460B /* RSSAbstractCell.m */; };
 		F7A41E9D823E2E21D7A91386 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 517C4AD514ED386FBB9948D0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -43,8 +45,8 @@
 		4021379C1AF2460900577734 /* RSSLentaItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSLentaItem.m; path = RssItem/RSSLentaItem.m; sourceTree = "<group>"; };
 		4021379F1AF261F000577734 /* RSSEnclosure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSEnclosure.h; path = Enclosure/RSSEnclosure.h; sourceTree = "<group>"; };
 		402137A01AF261F000577734 /* RSSEnclosure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSEnclosure.m; path = Enclosure/RSSEnclosure.m; sourceTree = "<group>"; };
-		402137A31AF26FDB00577734 /* RSSItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSItemCell.h; path = RSSItemCell/RSSItemCell.h; sourceTree = "<group>"; };
-		402137A41AF26FDB00577734 /* RSSItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSItemCell.m; path = RSSItemCell/RSSItemCell.m; sourceTree = "<group>"; };
+		402137A31AF26FDB00577734 /* RSSGazetaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSGazetaCell.h; path = RSSItemCell/RSSGazetaCell.h; sourceTree = "<group>"; };
+		402137A41AF26FDB00577734 /* RSSGazetaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSGazetaCell.m; path = RSSItemCell/RSSGazetaCell.m; sourceTree = "<group>"; };
 		4E96A23154C187A600FDAFEF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		517C4AD514ED386FBB9948D0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5566DB031AF184550096301C /* RSSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +70,10 @@
 		5566DB531AF38F020096301C /* UITableViewController+SeparatorZeroInset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableViewController+SeparatorZeroInset.m"; path = "UItableViewController+SeparatorZeroInset/UITableViewController+SeparatorZeroInset.m"; sourceTree = "<group>"; };
 		5566DB561AF3B4E40096301C /* RSSDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSDetailController.h; path = Controllers/DetailController/RSSDetailController.h; sourceTree = "<group>"; };
 		5566DB571AF3B4E40096301C /* RSSDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSDetailController.m; path = Controllers/DetailController/RSSDetailController.m; sourceTree = "<group>"; };
+		559760C01AFB75D300F7460B /* RSSLentaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSLentaCell.h; path = LentaCell/RSSLentaCell.h; sourceTree = "<group>"; };
+		559760C11AFB75D300F7460B /* RSSLentaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSLentaCell.m; path = LentaCell/RSSLentaCell.m; sourceTree = "<group>"; };
+		559760C51AFB767900F7460B /* RSSAbstractCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSAbstractCell.h; path = BaseCell/RSSAbstractCell.h; sourceTree = "<group>"; };
+		559760C61AFB767900F7460B /* RSSAbstractCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSAbstractCell.m; path = BaseCell/RSSAbstractCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,13 +113,13 @@
 			name = RSSEnclosure;
 			sourceTree = "<group>";
 		};
-		402137A21AF26FA800577734 /* RSSItemCell */ = {
+		402137A21AF26FA800577734 /* GazetaCell */ = {
 			isa = PBXGroup;
 			children = (
-				402137A31AF26FDB00577734 /* RSSItemCell.h */,
-				402137A41AF26FDB00577734 /* RSSItemCell.m */,
+				402137A31AF26FDB00577734 /* RSSGazetaCell.h */,
+				402137A41AF26FDB00577734 /* RSSGazetaCell.m */,
 			);
-			name = RSSItemCell;
+			name = GazetaCell;
 			sourceTree = "<group>";
 		};
 		5566DAFA1AF184550096301C = {
@@ -216,7 +222,9 @@
 		5566DB411AF186C90096301C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				402137A21AF26FA800577734 /* RSSItemCell */,
+				559760C41AFB762A00F7460B /* BaseCell */,
+				559760BF1AFB75AB00F7460B /* LentaCell */,
+				402137A21AF26FA800577734 /* GazetaCell */,
 				5566DB421AF186C90096301C /* LaunchScreen.xib */,
 				5566DB441AF186C90096301C /* Main.storyboard */,
 			);
@@ -268,6 +276,24 @@
 				5566DB571AF3B4E40096301C /* RSSDetailController.m */,
 			);
 			name = DetailController;
+			sourceTree = "<group>";
+		};
+		559760BF1AFB75AB00F7460B /* LentaCell */ = {
+			isa = PBXGroup;
+			children = (
+				559760C01AFB75D300F7460B /* RSSLentaCell.h */,
+				559760C11AFB75D300F7460B /* RSSLentaCell.m */,
+			);
+			name = LentaCell;
+			sourceTree = "<group>";
+		};
+		559760C41AFB762A00F7460B /* BaseCell */ = {
+			isa = PBXGroup;
+			children = (
+				559760C51AFB767900F7460B /* RSSAbstractCell.h */,
+				559760C61AFB767900F7460B /* RSSAbstractCell.m */,
+			);
+			name = BaseCell;
 			sourceTree = "<group>";
 		};
 		629BE415A0FA14741049EA7C /* Pods */ = {
@@ -426,13 +452,15 @@
 				402137991AF2398100577734 /* RSSAPIClient+RequestRss.m in Sources */,
 				4021379D1AF2460900577734 /* RSSLentaItem.m in Sources */,
 				5566DB501AF2BDA60096301C /* RSSGazetaItem.m in Sources */,
+				559760C71AFB767900F7460B /* RSSAbstractCell.m in Sources */,
 				5566DB581AF3B4E40096301C /* RSSDetailController.m in Sources */,
 				5566DB091AF184550096301C /* main.m in Sources */,
 				5566DB541AF38F020096301C /* UITableViewController+SeparatorZeroInset.m in Sources */,
 				5566DB3E1AF185C40096301C /* RSSAppDelegate.m in Sources */,
 				5566DB4C1AF1899E0096301C /* RSSAPIClient.m in Sources */,
+				559760C21AFB75D300F7460B /* RSSLentaCell.m in Sources */,
 				5566DB3A1AF185B10096301C /* RSSViewController.m in Sources */,
-				402137A51AF26FDB00577734 /* RSSItemCell.m in Sources */,
+				402137A51AF26FDB00577734 /* RSSGazetaCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,15 +12,19 @@
 #import "RSSAPIClient.h"
 #import "RSSAPIClient+RequestRss.h"
 
-
-#import "RSSItemCell.h"
+#import "RSSGazetaCell.h"
+#import "RSSLentaCell.h"
 
 #import "UITableViewController+SeparatorZeroInset.h"
 
-static NSString *cellIdentifier = @"RSSCellIdentifier";
+#import "RSSLentaItem.h"
+#import "RSSGazetaItem.h"
+
+static NSString *kLentaCellIdentifier  = @"RSSLentaCellIdentifier";
+static NSString *kGazetaCellIdentifier = @"RSSGazetaCellIdentifier";
 
 @interface RSSViewController ()
-@property (strong, nonatomic) RSSAPIClient *apiClient;
+@property (strong, nonatomic) RSSAPIClient   *apiClient;
 @property (strong, nonatomic) NSMutableArray *displayItems;
 @end
 
@@ -31,6 +35,9 @@ static NSString *cellIdentifier = @"RSSCellIdentifier";
     self.displayItems = [NSMutableArray array];
     // Do any additional setup after loading the view, typically from a nib.
     self.apiClient = [[RSSAPIClient alloc] init];
+    
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 10.0;
     
     [self.apiClient requestRss:^(NSArray *result) {
         NSParameterAssert(result);
@@ -51,30 +58,35 @@ static NSString *cellIdentifier = @"RSSCellIdentifier";
 
 #pragma mark - UITableView delegate
 
--(void)tableView:(UITableView *)tableView willDisplayCell:(RSSItemCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+-(void)tableView:(UITableView *)tableView willDisplayCell:(RSSAbstractCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     [super tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
     [cell showDisplay];
 }
 
--(void)tableView:(UITableView *)tableView didEndDisplayingCell:(RSSItemCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+-(void)tableView:(UITableView *)tableView didEndDisplayingCell:(RSSAbstractCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     [cell hideDisplay];
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [RSSItemCell heightWithItem:_displayItems[indexPath.item]];
-}
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    RSSItemCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+-(RSSAbstractCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    RSSAbstractCell *cell = [self fabricCellWithIndexPath:indexPath];
     [cell setItem:_displayItems[indexPath.item] andIndexPath:indexPath];
     [cell setTag:indexPath.item];
+
     return cell;
 }
 
+-(RSSAbstractCell *)fabricCellWithIndexPath:(NSIndexPath*)indexPath  {
+    
+    if([_displayItems[indexPath.item] isKindOfClass:[RSSLentaItem class]]) {
+        return [self.tableView dequeueReusableCellWithIdentifier:kLentaCellIdentifier forIndexPath:indexPath];
+    } else {
+        return [self.tableView dequeueReusableCellWithIdentifier:kGazetaCellIdentifier forIndexPath:indexPath];
+    }
+}
 
- #pragma mark - Navigation
+#pragma mark - Navigation
 
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
      if([segue.identifier isEqualToString:@"RSSDetailController"]) {
          UITableViewCell *cell = sender;
          NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
@@ -82,7 +94,6 @@ static NSString *cellIdentifier = @"RSSCellIdentifier";
          RSSDetailController *detailController = [segue destinationViewController];
          [detailController setRssItem:_displayItems[indexPath.item]];
      }
- }
-
+}
 
 @end

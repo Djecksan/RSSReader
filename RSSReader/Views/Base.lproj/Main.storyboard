@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RSSCellIdentifier" rowHeight="295" id="Gch-AX-eUt" customClass="RSSItemCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RSSLentaCellIdentifier" rowHeight="295" id="Gch-AX-eUt" customClass="RSSLentaCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gch-AX-eUt" id="AJ6-9K-Vgb">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -27,18 +27,14 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jxx-ug-SkH">
                                             <rect key="frame" x="8" y="35" width="398" height="251"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="251" id="v9p-RY-1rc"/>
+                                                <constraint firstAttribute="height" constant="251" id="XMm-cF-bHD"/>
                                             </constraints>
                                         </imageView>
-                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Jo8-am-vKt">
-                                            <rect key="frame" x="197" y="151" width="20" height="20"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="20" id="HCZ-A5-hSS"/>
-                                                <constraint firstAttribute="height" constant="20" id="ejc-Kr-XH9"/>
-                                            </constraints>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Jo8-am-vKt">
+                                            <rect key="frame" x="189" y="142" width="37" height="37"/>
                                             <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </activityIndicatorView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mk5-Sd-YkN">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mk5-Sd-YkN">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="294"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                             <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
@@ -46,35 +42,54 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="mk5-Sd-YkN" secondAttribute="bottom" id="0yb-fu-FMC"/>
-                                        <constraint firstAttribute="centerX" secondItem="Jo8-am-vKt" secondAttribute="centerX" id="7Wq-aa-cg0"/>
-                                        <constraint firstAttribute="bottom" secondItem="jxx-ug-SkH" secondAttribute="bottom" constant="8" id="7ue-22-gup"/>
-                                        <constraint firstItem="ffn-MR-Hl7" firstAttribute="top" secondItem="AJ6-9K-Vgb" secondAttribute="top" constant="8" id="Iii-Yd-jZo"/>
-                                        <constraint firstAttribute="trailing" secondItem="jxx-ug-SkH" secondAttribute="trailing" constant="8" id="PHe-A9-ghZ"/>
-                                        <constraint firstItem="mk5-Sd-YkN" firstAttribute="leading" secondItem="AJ6-9K-Vgb" secondAttribute="leading" id="RRd-dg-ioi"/>
-                                        <constraint firstItem="ffn-MR-Hl7" firstAttribute="leading" secondItem="AJ6-9K-Vgb" secondAttribute="leading" constant="8" id="Rwo-6s-Wrc"/>
-                                        <constraint firstItem="jxx-ug-SkH" firstAttribute="leading" secondItem="AJ6-9K-Vgb" secondAttribute="leading" constant="8" id="XRc-zv-eXt"/>
-                                        <constraint firstAttribute="trailing" secondItem="ffn-MR-Hl7" secondAttribute="trailing" constant="8" id="YfH-fh-XmX"/>
-                                        <constraint firstAttribute="centerY" secondItem="Jo8-am-vKt" secondAttribute="centerY" constant="-14" id="h3M-WK-Eb3"/>
-                                        <constraint firstItem="mk5-Sd-YkN" firstAttribute="top" secondItem="AJ6-9K-Vgb" secondAttribute="top" id="m4z-ND-dkW"/>
-                                        <constraint firstItem="jxx-ug-SkH" firstAttribute="top" secondItem="ffn-MR-Hl7" secondAttribute="bottom" constant="8" id="nlX-M3-9Wt"/>
-                                        <constraint firstItem="Jo8-am-vKt" firstAttribute="centerY" secondItem="ffn-MR-Hl7" secondAttribute="centerY" constant="143.5" id="uIU-zP-xmg"/>
-                                        <constraint firstAttribute="trailing" secondItem="mk5-Sd-YkN" secondAttribute="trailing" id="zd5-d1-k93"/>
+                                        <constraint firstAttribute="bottom" secondItem="jxx-ug-SkH" secondAttribute="bottom" constant="8" id="5B4-Ld-JwX"/>
+                                        <constraint firstItem="jxx-ug-SkH" firstAttribute="top" secondItem="ffn-MR-Hl7" secondAttribute="bottom" constant="8" id="962-XZ-dbE"/>
+                                        <constraint firstItem="ffn-MR-Hl7" firstAttribute="top" secondItem="AJ6-9K-Vgb" secondAttribute="top" constant="8" id="BBN-oZ-clr"/>
+                                        <constraint firstAttribute="trailing" secondItem="jxx-ug-SkH" secondAttribute="trailing" constant="8" id="OOp-Y8-0Dq"/>
+                                        <constraint firstAttribute="trailing" secondItem="ffn-MR-Hl7" secondAttribute="trailing" constant="8" id="PPJ-ZU-Myp"/>
+                                        <constraint firstItem="jxx-ug-SkH" firstAttribute="leading" secondItem="AJ6-9K-Vgb" secondAttribute="leading" constant="8" id="Yj7-VS-5g8"/>
+                                        <constraint firstItem="ffn-MR-Hl7" firstAttribute="leading" secondItem="AJ6-9K-Vgb" secondAttribute="leading" constant="8" id="cTk-H9-oPR"/>
                                     </constraints>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="7ue-22-gup"/>
-                                            <exclude reference="h3M-WK-Eb3"/>
-                                        </mask>
-                                    </variation>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
-                                    <outlet property="indicator" destination="Jo8-am-vKt" id="7GP-mD-4ku"/>
-                                    <outlet property="sourceLabel" destination="mk5-Sd-YkN" id="EeQ-d9-8xH"/>
-                                    <outlet property="title" destination="ffn-MR-Hl7" id="Jsc-bM-0nf"/>
-                                    <outlet property="viewImage" destination="jxx-ug-SkH" id="7Kg-nc-WHb"/>
+                                    <outlet property="indicator" destination="Jo8-am-vKt" id="Phz-g3-9Yv"/>
+                                    <outlet property="sourceLabel" destination="mk5-Sd-YkN" id="pbM-28-wag"/>
+                                    <outlet property="title" destination="ffn-MR-Hl7" id="NBC-BX-ZFR"/>
+                                    <outlet property="viewImage" destination="jxx-ug-SkH" id="CWZ-5R-oTI"/>
                                     <segue destination="Gzq-7O-Ref" kind="show" identifier="RSSDetailController" id="iQQ-rk-L9D"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RSSGazetaCellIdentifier" rowHeight="36" id="wOU-ac-Moj" customClass="RSSGazetaCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wOU-ac-Moj" id="kx7-OQ-Bz5">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxB-EZ-SRJ">
+                                            <rect key="frame" x="8" y="8" width="398" height="19"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBs-ga-vGb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                            <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="PxB-EZ-SRJ" secondAttribute="trailing" constant="8" id="1KI-dD-4bQ"/>
+                                        <constraint firstItem="PxB-EZ-SRJ" firstAttribute="leading" secondItem="kx7-OQ-Bz5" secondAttribute="leading" constant="8" id="6jz-YA-vqg"/>
+                                        <constraint firstItem="PxB-EZ-SRJ" firstAttribute="top" secondItem="kx7-OQ-Bz5" secondAttribute="top" constant="8" id="AZg-WZ-Ekb"/>
+                                        <constraint firstAttribute="bottom" secondItem="PxB-EZ-SRJ" secondAttribute="bottom" constant="8" id="qWr-Y2-zQf"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="sourceLabel" destination="JBs-ga-vGb" id="13K-X3-w2n"/>
+                                    <outlet property="title" destination="PxB-EZ-SRJ" id="quP-tr-qSx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
