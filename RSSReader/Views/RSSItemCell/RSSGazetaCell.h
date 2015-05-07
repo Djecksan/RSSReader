@@ -6,13 +6,8 @@
 //  Copyright (c) 2015 Code. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "RSSAbstractCell.h"
 
-@interface RSSItemCell : UITableViewCell
+@interface RSSGazetaCell : RSSAbstractCell
 
-+(CGFloat)heightWithItem:(id)item;
-
--(void)setItem:(id)item andIndexPath:(NSIndexPath *)indexPath;
--(void)showDisplay;
--(void)hideDisplay;
 @end

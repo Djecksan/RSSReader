@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Code. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "RSSAbstractCell.h"
 
-@interface RSSLentaCell : UITableViewCell
+@interface RSSLentaCell : RSSAbstractCell
 
 @end

@@ -6,18 +6,20 @@
 //  Copyright (c) 2015 Code. All rights reserved.
 //
 
-#import "BaseCell.h"
+#import "RSSAbstractCell.h"
 
-@implementation BaseCell
+@interface RSSAbstractCell()
 
-- (void)awakeFromNib {
-    // Initialization code
+@end
+
+@implementation RSSAbstractCell
+
+-(void)setItem:(id)item andIndexPath:(NSIndexPath *)indexPath {
+    SUBCLASS_MUST_OVERRIDE;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+-(void)showDisplay { /*optional */ }
 
-    // Configure the view for the selected state
-}
+-(void)hideDisplay { /*optional */ }
 
 @end

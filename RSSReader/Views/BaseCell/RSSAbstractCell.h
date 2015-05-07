@@ -6,8 +6,16 @@
 //  Copyright (c) 2015 Code. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+#import "MustOverride.h"
 
-@interface BaseCell : UITableViewCell
+@interface RSSAbstractCell : UITableViewCell
+@property (nonatomic) NSIndexPath *currentIndexPath;
+@property (weak, nonatomic) IBOutlet UILabel *title;
+@property (weak, nonatomic) IBOutlet UILabel *sourceLabel;
+
+-(void)setItem:(id)item andIndexPath:(NSIndexPath *)indexPath;
+-(void)showDisplay;
+-(void)hideDisplay;
 
 @end
