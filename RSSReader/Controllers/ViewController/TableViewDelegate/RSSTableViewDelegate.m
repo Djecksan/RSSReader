@@ -57,6 +57,11 @@ NSString * const kGazetaCellIdentifier = @"RSSGazetaCellIdentifier";
     [cell hideDisplay];
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if(_didSelectCell)
+        _didSelectCell(_displayItems[indexPath.item]);
+}
+
 -(RSSAbstractCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     RSSAbstractCell *cell = [self fabricCellWithIndexPath:indexPath withTableView:tableView];
     [cell setItem:_displayItems[indexPath.item] andIndexPath:indexPath];

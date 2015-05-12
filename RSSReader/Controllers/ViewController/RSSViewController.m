@@ -31,8 +31,14 @@
     self.displayItems = [NSMutableArray array];
     
     self.tableDelegate = [[RSSTableViewDelegate alloc] init];
+    __weak typeof(self) weakSelf = self;
+    [self.tableDelegate setDidSelectCell:^(id item) {
+        [weakSelf showDetailControllerWithItem:item];
+    }];
+    
     [self.tableView setDelegate:self.tableDelegate];
     [self.tableView setDataSource:self.tableDelegate];
+    
     
     // Do any additional setup after loading the view, typically from a nib.
     self.apiClient = [[RSSAPIClient alloc] init];
@@ -41,7 +47,7 @@
     [self.tableView registerClass:[RSSLentaCell class] forCellReuseIdentifier:kLentaCellIdentifier];
     
     self.tableView.estimatedRowHeight = UITableViewAutomaticDimension;
-    self.tableView.allowsSelection = NO;
+//    self.tableView.allowsSelection = NO;
     
     [self.apiClient requestRss:^(NSArray *result) {
         NSParameterAssert(result);
@@ -53,16 +59,10 @@
     }];
 }
 
-//#pragma mark - Navigation
-//
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//     if([segue.identifier isEqualToString:@"RSSDetailController1"] || [segue.identifier isEqualToString:@"RSSDetailController2"]) {
-//         UITableViewCell *cell = sender;
-//         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-//         
-//         RSSDetailController *detailController = [segue destinationViewController];
-//         [detailController setRssItem:_displayItems[indexPath.item]];
-//     }
-//}
+-(void)showDetailControllerWithItem:(id)item {
+    RSSDetailController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"RSSDetailController"];
+    [detail setRssItem:item];
+    [self.navigationController pushViewController:detail animated:YES];
+}
 
 @end
