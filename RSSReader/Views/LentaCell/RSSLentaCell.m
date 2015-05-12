@@ -82,6 +82,7 @@
 }
 
 -(void)prepareForReuse {
+    [super prepareForReuse];
     [_viewImage setImage:nil];
 }
 

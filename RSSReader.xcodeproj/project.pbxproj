@@ -359,6 +359,7 @@
 		5566DAFB1AF184550096301C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = RSS;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = Code;
 				TargetAttributes = {
