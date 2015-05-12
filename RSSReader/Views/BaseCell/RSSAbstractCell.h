@@ -7,12 +7,18 @@
 //
 
 @import UIKit;
+
 #import "MustOverride.h"
+#import "PureLayout.h"
+
+#define kLabelHorizontalInsets      8.0f
+#define kLabelVerticalInsets        8.0f
 
 @interface RSSAbstractCell : UITableViewCell
 @property (nonatomic) NSIndexPath *currentIndexPath;
-@property (weak, nonatomic) IBOutlet UILabel *title;
-@property (weak, nonatomic) IBOutlet UILabel *sourceLabel;
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *sourceLabel;
+@property (nonatomic) BOOL didSetupConstraints;
 
 -(void)setItem:(id)item andIndexPath:(NSIndexPath *)indexPath;
 -(void)showDisplay;

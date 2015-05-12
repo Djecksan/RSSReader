@@ -24,6 +24,9 @@
     
     self.tableView.separatorColor = [UIColor clearColor];
     
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 10.0;
+    
     [self.navigationItem setTitle:[self.rssItem valueForKey:@"source"]];
     [_titleLabel setText:[self.rssItem valueForKey:@"title"]];
     [_descriptionLabel setText:[self.rssItem valueForKey:@"sDescription"]];
@@ -32,6 +35,7 @@
         [self loadPosterWithURL:[self.rssItem valueForKeyPath:@"enclosure.url"]];
     }
 }
+
 -(void)loadPosterWithURL:(NSURL *)URL {
     NSParameterAssert(URL);
     

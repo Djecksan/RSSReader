@@ -24,18 +24,21 @@ PODS:
     - EasyMapping/Core (= 0.14.1)
   - EasyMapping/Core (0.14.1)
   - MustOverride (1.1)
+  - PureLayout (2.0.6)
   - XMLReader (0.0.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5.1)
   - EasyMapping (~> 0.14.1)
   - MustOverride (~> 1.1)
+  - PureLayout
   - XMLReader (~> 0.0.2)
 
 SPEC CHECKSUMS:
   AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
   EasyMapping: ff55f1c1965aced3c3a10a247dd2b673dac3337e
   MustOverride: feccf16d11e574a814a03d940b9f4d7b4a759ce0
+  PureLayout: f25f0bb904d5ccfe6e31da3cb869185259f02e0d
   XMLReader: c7e54b707c368e2fa545d8313276b4de13a36ff5
 
 COCOAPODS: 0.36.4
