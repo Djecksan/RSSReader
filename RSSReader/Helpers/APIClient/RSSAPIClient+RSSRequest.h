@@ -8,7 +8,7 @@
 
 #import "RSSAPIClient.h"
 
-@interface RSSAPIClient (RequestRss)
+@interface RSSAPIClient (RSSRequest)
 
 -(void)requestRss:(RSSAPIClientSuccess)success failure:(RSSAPIClientFailure)failure;
 

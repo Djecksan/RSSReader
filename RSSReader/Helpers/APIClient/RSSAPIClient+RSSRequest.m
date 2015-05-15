@@ -6,14 +6,14 @@
 //  Copyright (c) 2015 Code. All rights reserved.
 //
 
-#import "RSSAPIClient+RequestRss.h"
+#import "RSSAPIClient+RSSRequest.h"
 #import "XMLReader.h"
 
 //models
 #import "RSSLentaItem.h"
 #import "RSSGazetaItem.h"
 
-@implementation RSSAPIClient (RequestRss)
+@implementation RSSAPIClient (RSSRequest)
 
 -(void)requestRss:(RSSAPIClientSuccess)success failure:(RSSAPIClientFailure)failure {
     

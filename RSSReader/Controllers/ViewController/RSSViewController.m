@@ -10,7 +10,7 @@
 #import "RSSDetailController.h"
 
 #import "RSSAPIClient.h"
-#import "RSSAPIClient+RequestRss.h"
+#import "RSSAPIClient+RSSRequest.h"
 
 #import "RSSGazetaCell.h"
 #import "RSSLentaCell.h"

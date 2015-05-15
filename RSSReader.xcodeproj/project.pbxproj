@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		402137991AF2398100577734 /* RSSAPIClient+RequestRss.m in Sources */ = {isa = PBXBuildFile; fileRef = 402137981AF2398100577734 /* RSSAPIClient+RequestRss.m */; };
-		4021379D1AF2460900577734 /* RSSLentaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4021379C1AF2460900577734 /* RSSLentaItem.m */; };
+		402137991AF2398100577734 /* RSSAPIClient+RSSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 402137981AF2398100577734 /* RSSAPIClient+RSSRequest.m */; };
 		402137A11AF261F000577734 /* RSSEnclosure.m in Sources */ = {isa = PBXBuildFile; fileRef = 402137A01AF261F000577734 /* RSSEnclosure.m */; };
 		402137A51AF26FDB00577734 /* RSSGazetaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 402137A41AF26FDB00577734 /* RSSGazetaCell.m */; };
 		5566DB091AF184550096301C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5566DB081AF184550096301C /* main.m */; };
@@ -19,11 +18,13 @@
 		5566DB461AF186C90096301C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5566DB421AF186C90096301C /* LaunchScreen.xib */; };
 		5566DB471AF186C90096301C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5566DB441AF186C90096301C /* Main.storyboard */; };
 		5566DB4C1AF1899E0096301C /* RSSAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5566DB4B1AF1899E0096301C /* RSSAPIClient.m */; };
-		5566DB501AF2BDA60096301C /* RSSGazetaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5566DB4F1AF2BDA60096301C /* RSSGazetaItem.m */; };
 		5566DB581AF3B4E40096301C /* RSSDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5566DB571AF3B4E40096301C /* RSSDetailController.m */; };
 		559760C21AFB75D300F7460B /* RSSLentaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 559760C11AFB75D300F7460B /* RSSLentaCell.m */; };
-		559760C71AFB767900F7460B /* RSSAbstractCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 559760C61AFB767900F7460B /* RSSAbstractCell.m */; };
 		559760CB1B02830800F7460B /* RSSTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 559760CA1B02830800F7460B /* RSSTableViewDelegate.m */; };
+		559760D01B0350C200F7460B /* UIImageView+RSSLoadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 559760CF1B0350C200F7460B /* UIImageView+RSSLoadImage.m */; };
+		559760D81B0616E300F7460B /* RSSAbstractCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 559760D61B0616E300F7460B /* RSSAbstractCell.m */; };
+		559760DB1B06173A00F7460B /* RSSLentaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 559760DA1B06173A00F7460B /* RSSLentaItem.m */; };
+		559760DE1B06174900F7460B /* RSSGazetaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 559760DD1B06174900F7460B /* RSSGazetaItem.m */; };
 		F7A41E9D823E2E21D7A91386 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 517C4AD514ED386FBB9948D0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -39,10 +40,8 @@
 
 /* Begin PBXFileReference section */
 		0FE987FD1D8E49D73C8CDA73 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		402137971AF2398100577734 /* RSSAPIClient+RequestRss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RSSAPIClient+RequestRss.h"; sourceTree = "<group>"; };
-		402137981AF2398100577734 /* RSSAPIClient+RequestRss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RSSAPIClient+RequestRss.m"; sourceTree = "<group>"; };
-		4021379B1AF2460900577734 /* RSSLentaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSLentaItem.h; path = RssItem/RSSLentaItem.h; sourceTree = "<group>"; };
-		4021379C1AF2460900577734 /* RSSLentaItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSLentaItem.m; path = RssItem/RSSLentaItem.m; sourceTree = "<group>"; };
+		402137971AF2398100577734 /* RSSAPIClient+RSSRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RSSAPIClient+RSSRequest.h"; sourceTree = "<group>"; };
+		402137981AF2398100577734 /* RSSAPIClient+RSSRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RSSAPIClient+RSSRequest.m"; sourceTree = "<group>"; };
 		4021379F1AF261F000577734 /* RSSEnclosure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSEnclosure.h; path = Enclosure/RSSEnclosure.h; sourceTree = "<group>"; };
 		402137A01AF261F000577734 /* RSSEnclosure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSEnclosure.m; path = Enclosure/RSSEnclosure.m; sourceTree = "<group>"; };
 		402137A31AF26FDB00577734 /* RSSGazetaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSGazetaCell.h; path = RSSItemCell/RSSGazetaCell.h; sourceTree = "<group>"; };
@@ -64,16 +63,21 @@
 		5566DB451AF186C90096301C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5566DB4A1AF1899E0096301C /* RSSAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSAPIClient.h; sourceTree = "<group>"; };
 		5566DB4B1AF1899E0096301C /* RSSAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSAPIClient.m; sourceTree = "<group>"; };
-		5566DB4E1AF2BDA60096301C /* RSSGazetaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSGazetaItem.h; path = RSSGazetaItem/RSSGazetaItem.h; sourceTree = "<group>"; };
-		5566DB4F1AF2BDA60096301C /* RSSGazetaItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSGazetaItem.m; path = RSSGazetaItem/RSSGazetaItem.m; sourceTree = "<group>"; };
 		5566DB561AF3B4E40096301C /* RSSDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSDetailController.h; path = Controllers/DetailController/RSSDetailController.h; sourceTree = "<group>"; };
 		5566DB571AF3B4E40096301C /* RSSDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSDetailController.m; path = Controllers/DetailController/RSSDetailController.m; sourceTree = "<group>"; };
 		559760C01AFB75D300F7460B /* RSSLentaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSLentaCell.h; path = LentaCell/RSSLentaCell.h; sourceTree = "<group>"; };
 		559760C11AFB75D300F7460B /* RSSLentaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSLentaCell.m; path = LentaCell/RSSLentaCell.m; sourceTree = "<group>"; };
-		559760C51AFB767900F7460B /* RSSAbstractCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSAbstractCell.h; path = BaseCell/RSSAbstractCell.h; sourceTree = "<group>"; };
-		559760C61AFB767900F7460B /* RSSAbstractCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSAbstractCell.m; path = BaseCell/RSSAbstractCell.m; sourceTree = "<group>"; };
 		559760C91B02830800F7460B /* RSSTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSTableViewDelegate.h; path = Controllers/ViewController/TableViewDelegate/RSSTableViewDelegate.h; sourceTree = "<group>"; };
 		559760CA1B02830800F7460B /* RSSTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSTableViewDelegate.m; path = Controllers/ViewController/TableViewDelegate/RSSTableViewDelegate.m; sourceTree = "<group>"; };
+		559760CE1B0350C200F7460B /* UIImageView+RSSLoadImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+RSSLoadImage.h"; path = "Category/UIImageView/UIImageView+RSSLoadImage.h"; sourceTree = "<group>"; };
+		559760CF1B0350C200F7460B /* UIImageView+RSSLoadImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+RSSLoadImage.m"; path = "Category/UIImageView/UIImageView+RSSLoadImage.m"; sourceTree = "<group>"; };
+		559760D51B0616E300F7460B /* RSSAbstractCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSAbstractCell.h; sourceTree = "<group>"; };
+		559760D61B0616E300F7460B /* RSSAbstractCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSAbstractCell.m; sourceTree = "<group>"; };
+		559760D71B0616E300F7460B /* RSSAbstractCell_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSAbstractCell_Private.h; sourceTree = "<group>"; };
+		559760D91B06173A00F7460B /* RSSLentaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSLentaItem.h; path = LentaItem/RSSLentaItem.h; sourceTree = "<group>"; };
+		559760DA1B06173A00F7460B /* RSSLentaItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSLentaItem.m; path = LentaItem/RSSLentaItem.m; sourceTree = "<group>"; };
+		559760DC1B06174900F7460B /* RSSGazetaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSGazetaItem.h; path = GazetaItem/RSSGazetaItem.h; sourceTree = "<group>"; };
+		559760DD1B06174900F7460B /* RSSGazetaItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSGazetaItem.m; path = GazetaItem/RSSGazetaItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,22 +99,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4021379A1AF245D200577734 /* RSSLentaItem */ = {
+		4021379A1AF245D200577734 /* LentaItem */ = {
 			isa = PBXGroup;
 			children = (
-				4021379B1AF2460900577734 /* RSSLentaItem.h */,
-				4021379C1AF2460900577734 /* RSSLentaItem.m */,
+				559760D91B06173A00F7460B /* RSSLentaItem.h */,
+				559760DA1B06173A00F7460B /* RSSLentaItem.m */,
 			);
-			name = RSSLentaItem;
+			name = LentaItem;
 			sourceTree = "<group>";
 		};
-		4021379E1AF261A700577734 /* RSSEnclosure */ = {
+		4021379E1AF261A700577734 /* Enclosure */ = {
 			isa = PBXGroup;
 			children = (
 				4021379F1AF261F000577734 /* RSSEnclosure.h */,
 				402137A01AF261F000577734 /* RSSEnclosure.m */,
 			);
-			name = RSSEnclosure;
+			name = Enclosure;
 			sourceTree = "<group>";
 		};
 		402137A21AF26FA800577734 /* GazetaCell */ = {
@@ -213,9 +217,9 @@
 		5566DB401AF186C90096301C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5566DB4D1AF2BD460096301C /* RSSGazetaItem */,
-				4021379E1AF261A700577734 /* RSSEnclosure */,
-				4021379A1AF245D200577734 /* RSSLentaItem */,
+				5566DB4D1AF2BD460096301C /* GazetaItem */,
+				4021379E1AF261A700577734 /* Enclosure */,
+				4021379A1AF245D200577734 /* LentaItem */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -223,7 +227,7 @@
 		5566DB411AF186C90096301C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				559760C41AFB762A00F7460B /* BaseCell */,
+				559760D41B0616E300F7460B /* AbstractCell */,
 				559760BF1AFB75AB00F7460B /* LentaCell */,
 				402137A21AF26FA800577734 /* GazetaCell */,
 				5566DB421AF186C90096301C /* LaunchScreen.xib */,
@@ -235,6 +239,7 @@
 		5566DB481AF189300096301C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				559760CC1B03507100F7460B /* Category */,
 				5566DB491AF189300096301C /* APIClient */,
 			);
 			path = Helpers;
@@ -245,19 +250,19 @@
 			children = (
 				5566DB4A1AF1899E0096301C /* RSSAPIClient.h */,
 				5566DB4B1AF1899E0096301C /* RSSAPIClient.m */,
-				402137971AF2398100577734 /* RSSAPIClient+RequestRss.h */,
-				402137981AF2398100577734 /* RSSAPIClient+RequestRss.m */,
+				402137971AF2398100577734 /* RSSAPIClient+RSSRequest.h */,
+				402137981AF2398100577734 /* RSSAPIClient+RSSRequest.m */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
 		};
-		5566DB4D1AF2BD460096301C /* RSSGazetaItem */ = {
+		5566DB4D1AF2BD460096301C /* GazetaItem */ = {
 			isa = PBXGroup;
 			children = (
-				5566DB4E1AF2BDA60096301C /* RSSGazetaItem.h */,
-				5566DB4F1AF2BDA60096301C /* RSSGazetaItem.m */,
+				559760DC1B06174900F7460B /* RSSGazetaItem.h */,
+				559760DD1B06174900F7460B /* RSSGazetaItem.m */,
 			);
-			name = RSSGazetaItem;
+			name = GazetaItem;
 			sourceTree = "<group>";
 		};
 		5566DB551AF3B4BA0096301C /* DetailController */ = {
@@ -278,15 +283,6 @@
 			name = LentaCell;
 			sourceTree = "<group>";
 		};
-		559760C41AFB762A00F7460B /* BaseCell */ = {
-			isa = PBXGroup;
-			children = (
-				559760C51AFB767900F7460B /* RSSAbstractCell.h */,
-				559760C61AFB767900F7460B /* RSSAbstractCell.m */,
-			);
-			name = BaseCell;
-			sourceTree = "<group>";
-		};
 		559760C81B0282D500F7460B /* RSSTableViewDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +290,33 @@
 				559760CA1B02830800F7460B /* RSSTableViewDelegate.m */,
 			);
 			name = RSSTableViewDelegate;
+			sourceTree = "<group>";
+		};
+		559760CC1B03507100F7460B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				559760CD1B03508600F7460B /* UIImageView */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		559760CD1B03508600F7460B /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				559760CE1B0350C200F7460B /* UIImageView+RSSLoadImage.h */,
+				559760CF1B0350C200F7460B /* UIImageView+RSSLoadImage.m */,
+			);
+			name = UIImageView;
+			sourceTree = "<group>";
+		};
+		559760D41B0616E300F7460B /* AbstractCell */ = {
+			isa = PBXGroup;
+			children = (
+				559760D51B0616E300F7460B /* RSSAbstractCell.h */,
+				559760D61B0616E300F7460B /* RSSAbstractCell.m */,
+				559760D71B0616E300F7460B /* RSSAbstractCell_Private.h */,
+			);
+			path = AbstractCell;
 			sourceTree = "<group>";
 		};
 		629BE415A0FA14741049EA7C /* Pods */ = {
@@ -450,16 +473,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				402137A11AF261F000577734 /* RSSEnclosure.m in Sources */,
-				402137991AF2398100577734 /* RSSAPIClient+RequestRss.m in Sources */,
+				402137991AF2398100577734 /* RSSAPIClient+RSSRequest.m in Sources */,
+				559760D81B0616E300F7460B /* RSSAbstractCell.m in Sources */,
 				559760CB1B02830800F7460B /* RSSTableViewDelegate.m in Sources */,
-				4021379D1AF2460900577734 /* RSSLentaItem.m in Sources */,
-				5566DB501AF2BDA60096301C /* RSSGazetaItem.m in Sources */,
-				559760C71AFB767900F7460B /* RSSAbstractCell.m in Sources */,
 				5566DB581AF3B4E40096301C /* RSSDetailController.m in Sources */,
 				5566DB091AF184550096301C /* main.m in Sources */,
 				5566DB3E1AF185C40096301C /* RSSAppDelegate.m in Sources */,
 				5566DB4C1AF1899E0096301C /* RSSAPIClient.m in Sources */,
 				559760C21AFB75D300F7460B /* RSSLentaCell.m in Sources */,
+				559760DE1B06174900F7460B /* RSSGazetaItem.m in Sources */,
+				559760DB1B06173A00F7460B /* RSSLentaItem.m in Sources */,
+				559760D01B0350C200F7460B /* UIImageView+RSSLoadImage.m in Sources */,
 				5566DB3A1AF185B10096301C /* RSSViewController.m in Sources */,
 				402137A51AF26FDB00577734 /* RSSGazetaCell.m in Sources */,
 			);

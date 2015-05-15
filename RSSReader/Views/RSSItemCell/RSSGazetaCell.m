@@ -5,6 +5,7 @@
 //  Created by e.Tulenev on 30.04.15.
 //  Copyright (c) 2015 Code. All rights reserved.
 //
+#import "RSSAbstractCell_Private.h"
 
 #import "RSSGazetaCell.h"
 #import "RSSGazetaItem.h"
@@ -22,26 +23,28 @@
 //Настройка констрейнтов
 - (void)updateConstraints
 {
-    if (!self.didSetupConstraints) {
-        
-        [UIView autoSetPriority:UILayoutPriorityRequired forConstraints:^{
-            [self.titleLabel autoSetContentCompressionResistancePriorityForAxis:ALAxisVertical];
-        }];
-        
-        [self.titleLabel autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:4.];
-        [self.titleLabel autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:8.];
-        [self.titleLabel autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:8.];
-        [self.titleLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:4.];
-        
-        [self.sourceLabel autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:8.];
-        [self.sourceLabel autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:8.];
-        [self.sourceLabel autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-        [self.sourceLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
-        
+    if (!self.didSetupConstraints) {        
+        [self addConstraintsForTitileLabel];
+        [self addConstraintsForSourceLabel];
         self.didSetupConstraints = YES;
     }
-    
     [super updateConstraints];
+}
+
+#pragma mark - setting constraints
+
+-(void)addConstraintsForTitileLabel {
+    [self.titleLabel autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:kVerticalInsets];
+    [self.titleLabel autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:kHorizontalInsets];
+    [self.titleLabel autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:kHorizontalInsets];
+    [self.titleLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:kVerticalInsets];
+}
+
+-(void)addConstraintsForSourceLabel {
+    [self.sourceLabel autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:kHorizontalInsets];
+    [self.sourceLabel autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:kHorizontalInsets];
+    [self.sourceLabel autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+    [self.sourceLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
 }
 
 @end
